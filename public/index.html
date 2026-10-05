@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#173c38" />
+		<title>Registro de hóspedes | Casa Nativa</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="/style.css" />
+		<script type="module" src="/app.js"></script>
+	</head>
+	<body>
+		<main class="page-shell">
+			<header class="masthead">
+				<a class="brand" href="/" aria-label="Casa Nativa, início">
+					<span class="brand-mark" aria-hidden="true">CN</span>
+					<span class="brand-name">CASA NATIVA <span>HOTEL &amp; ESTADIA</span></span>
+				</a>
+				<span class="front-desk">RECEPÇÃO <span class="status-dot" aria-hidden="true"></span></span>
+			</header>
+
+			<section class="registration" aria-labelledby="page-title">
+				<div class="section-kicker"><span class="kicker-line" aria-hidden="true"></span> FICHA DE HOSPEDAGEM</div>
+				<h1 id="page-title">Registro de hóspedes</h1>
+				<p class="intro">Vamos preparar sua chegada.</p>
+
+				<form id="guest-form" novalidate>
+					<div class="form-grid">
+						<div class="field field-full">
+							<label for="fullName">Nome completo</label>
+							<input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Como aparece no documento" aria-describedby="fullName-error" required />
+							<small class="field-error" id="fullName-error"></small>
+						</div>
+
+						<div class="field">
+							<label for="email">E-mail</label>
+							<input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" aria-describedby="email-error" required />
+							<small class="field-error" id="email-error"></small>
+						</div>
+
+						<div class="field">
+							<label for="phone">Telefone</label>
+							<input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" aria-describedby="phone-error" required />
+							<small class="field-error" id="phone-error"></small>
+						</div>
+
+						<div class="field">
+							<label for="checkIn">Data check-in</label>
+							<input id="checkIn" name="checkIn" type="date" autocomplete="off" aria-describedby="checkIn-error" required />
+							<small class="field-error" id="checkIn-error"></small>
+						</div>
+
+						<div class="field">
+							<label for="checkOut">Data check-out</label>
+							<input id="checkOut" name="checkOut" type="date" autocomplete="off" aria-describedby="checkOut-error" required />
+							<small class="field-error" id="checkOut-error"></small>
+						</div>
+
+						<div class="field field-guests">
+							<label for="guests">Número de hóspedes</label>
+							<input id="guests" name="guests" type="number" min="1" step="1" inputmode="numeric" value="1" aria-describedby="guests-error" required />
+							<small class="field-error" id="guests-error"></small>
+						</div>
+					</div>
+
+					<div class="form-footer">
+						<p class="privacy-note"><span aria-hidden="true">✳</span> Seus dados são usados apenas para a hospedagem.</p>
+						<button type="submit">Registrar hóspede <span aria-hidden="true">↗</span></button>
+					</div>
+					<p class="form-message" id="form-message" role="status" aria-live="polite" hidden></p>
+				</form>
+			</section>
+
+			<footer class="page-footer">
+				<span>CASA NATIVA · HOSPITALIDADE COM CALMA</span>
+				<span>PRECISA DE AJUDA? <a href="mailto:recepcao@casanativa.com">FALE COM A RECEPÇÃO</a></span>
+			</footer>
+		</main>
+	</body>
+</html>
